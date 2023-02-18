@@ -48,9 +48,9 @@ def most_common(word_count):
     sorted_word_count = sorted(word_count.items(), key=lambda item: item[1],
                                reverse=True)
     # for loop to iterate 8 times
-    for i in range(8):
-        print(f"  {sorted_word_count[i][0]}: appears "
-              f"{sorted_word_count[i][1]} times.")
+    for word in sorted_word_count[:8] :
+        print(f"  {word[0]}: appears "
+              f"{word[1]} times.")
 
     return None
 
