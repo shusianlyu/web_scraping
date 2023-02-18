@@ -64,8 +64,8 @@ def repeats(word_count):
     """
     # get a list of 4-letter or longer words that
     # appear more than 3 times alphabetically
-    words = sorted([word for word in word_count if word_count[word] > 3
-             and len(word) >= 4])
+    words = sorted([word for word in word_count
+                    if word_count[word] > 3 and len(word) >= 4])
 
     for word in words:
         print(f"  {word}")
@@ -133,15 +133,11 @@ def common_words(words1, words2):
     # compare length of two lists and check if the word
     # in longer list appear in the shorter list
     # use set to store common words as it only contains unique data
-    if len(words1) >= len(words2):
-        commons = set(word for word in words1 if word in words2
-                      and len(word) >= 4)
-    else:
-        commons = set(word for word in words2 if word in words1
-                      and len(word) >= 4)
+    commons = set((word for word in set(words1) if len(word) >= 4)) \
+              & set(word for word in set(words2) if len(word) >= 4)
 
     # print the common words
-    for i in sorted(commons):
+    for i in sorted(list(commons)):
         print(i)
 
 
