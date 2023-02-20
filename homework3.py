@@ -104,7 +104,7 @@ def get_stats(words):
     word_counts = len(words)  # total number of words
     words_dic = tally(words)  # build the word count dictionary
     distinct_words = len(words_dic)  # number of distinct words
-    longest = max(words_dic.keys(), key=len)  # longest word
+    longest = max(words_dic, key=len)  # longest word
 
     print(f"There are {word_counts} words in total in the song.")
     print(f"There are {distinct_words} distinct words in the song.")
