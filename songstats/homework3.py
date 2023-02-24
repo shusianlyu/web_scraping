@@ -127,7 +127,7 @@ def common_words(words1, words2):
     # compare length of two lists and check if the word
     # in longer list appear in the shorter list
     # use set to store common words as it only contains unique data
-    commons = ({word for word in words1 if len(word) >= 4}&
+    commons = ({word for word in words1 if len(word) >= 4} &
                {word for word in words2 if len(word) >= 4})
 
     # print the common words
