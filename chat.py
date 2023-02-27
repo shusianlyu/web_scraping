@@ -36,7 +36,7 @@ pronoun_dict = {'i': 'you', 'am': 'are', 'my': 'your', 'your': 'my',
 # function below
 
 
-def change_person(words):
+def change_person(*words):
     """
     Change pronouns in words to fit response
     :param words: list of words
@@ -83,7 +83,7 @@ def chat_with(name):
             # rule 3
             case [question, 'you', *rest] if question in rule3 and is_question:
                 no_answer = f'No {name}, I {question} not ' \
-                            f'{change_person(rest)}.'
+                            f'{change_person(*rest)}.'
                 question_tuple = (f'Yes i {question}.', no_answer)
                 print(random.choice(question_tuple))
             # rule 4
@@ -104,10 +104,10 @@ def chat_with(name):
                 print(random.choice(question_tuple))
             # rule 7
             case ['i', word, *rest] if word in rule7:
-                print(f'Why do you {word} {change_person(rest)}?')
+                print(f'Why do you {word} {change_person(*rest)}?')
             # rule 8
             case ['i', *rest] if words[-1] != 'too':
-                print(f'I {" ".join(rest)} too')
+                print(f'I {" ".join(rest)} too.')
             # rule 9
             case [verb, *rest] if verb in rule9:
                 print(f'You {verb} {" ".join(rest)}.')
@@ -137,7 +137,7 @@ def main():
     #     rand = colors.pop()
     #     print(rand)
     name = input("Hello. What is your name please? ")
-    done = chat_with(name)
+    done = False
     while not done:
         done = chat_with(name)
 
