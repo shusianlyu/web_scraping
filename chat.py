@@ -59,71 +59,67 @@ def chat_with(name):
     :param name: string
     :return: Boolean
     """
-    done = False
-    while not done:
-        user_input = input("Talk to me please> ")
-        # convert user input into list with all lowercase and punctuation
-        # stripped words.
-        words = [word.strip(string.punctuation) for word in
-                 user_input.lower().strip(string.punctuation).split()]
-        # create set with common topics for rule 2
-        common_topics = set(special_topics) & set(words)
-        # last character is question mark
-        is_question = user_input[-1] == "?"
-        match words:
-            # rule 1
-            case ['bye']:
-                done = True
-                print(f'Bye {name}')
-                print(f'Have a great day!')
-            # rule 2
-            case _ if common_topics:
-                print(f'Tell me more about your '
-                      f'{common_topics.pop()}, {name}.')
-            # rule 3
-            case [question, 'you', *rest] if question in rule3 and is_question:
-                no_answer = f'No {name}, I {question} not ' \
-                            f'{change_person(*rest)}.'
-                question_tuple = (f'Yes i {question}.', no_answer)
-                print(random.choice(question_tuple))
-            # rule 4
-            case ['why', *rest] if is_question:
-                print('Why not?')
-            # rule 5
-            case ['how', *rest] if is_question:
-                question_tuple = (f'{name}, why do you ask?', f'{name}, '
-                                                              f'how would an '
-                                                              f'answer to that'
-                                                              f' help you?')
-                print(random.choice(question_tuple))
-            # rule 6
-            case ['what', *rest] if is_question:
-                question_tuple = (f'What do you think {name}?', f'Why is that '
-                                                                f'important '
-                                                                f'{name}?')
-                print(random.choice(question_tuple))
-            # rule 7
-            case ['i', word, *rest] if word in rule7:
-                print(f'Why do you {word} {change_person(*rest)}?')
-            # rule 8
-            case ['i', *rest] if words[-1] != 'too':
-                print(f'I {" ".join(rest)} too.')
-            # rule 9
-            case [verb, *rest] if verb in rule9:
-                print(f'You {verb} {" ".join(rest)}.')
-            # rule 10
-            case _ if is_question:
-                question_tuple = ('I have no clue.', 'Maybe.')
-                print(random.choice(question_tuple))
-            # rule 11
-            case _ if 'because' in words:
-                print('Is that real reason?')
-            # rule 12
-            case _:
-                question_tuple = ("That's interesting.", "That's nice!",
-                                  'Can you elaborate on that?')
-                print(random.choice(question_tuple))
-        return done
+    user_input = input("Talk to me please> ")
+    # convert user input into list with all lowercase and punctuation
+    # stripped words.
+    words = [word.strip(string.punctuation) for word in
+             user_input.lower().strip(string.punctuation).split()]
+    # create set with common topics for rule 2
+    common_topics = set(special_topics) & set(words)
+    # last character is question mark
+    is_question = user_input[-1] == "?"
+    match words:
+        # rule 1
+        case ['bye']:
+            return True
+        # rule 2
+        case _ if common_topics:
+            print(f'Tell me more about your '
+                  f'{common_topics.pop()}, {name}.')
+        # rule 3
+        case [question, 'you', *rest] if question in rule3 and is_question:
+            no_answer = f'No {name}, I {question} not ' \
+                        f'{change_person(*rest)}.'
+            question_tuple = (f'Yes i {question}.', no_answer)
+            print(random.choice(question_tuple))
+        # rule 4
+        case ['why', *rest] if is_question:
+            print('Why not?')
+        # rule 5
+        case ['how', *rest] if is_question:
+            question_tuple = (f'{name}, why do you ask?', f'{name}, '
+                                                          f'how would an '
+                                                          f'answer to that'
+                                                          f' help you?')
+            print(random.choice(question_tuple))
+        # rule 6
+        case ['what', *rest] if is_question:
+            question_tuple = (f'What do you think {name}?', f'Why is that '
+                                                            f'important '
+                                                            f'{name}?')
+            print(random.choice(question_tuple))
+        # rule 7
+        case ['i', word, *rest] if word in rule7:
+            print(f'Why do you {word} {change_person(*rest)}?')
+        # rule 8
+        case ['i', *rest] if words[-1] != 'too':
+            print(f'I {" ".join(rest)} too.')
+        # rule 9
+        case [verb, *rest] if verb in rule9:
+            print(f'You {verb} {" ".join(rest)}.')
+        # rule 10
+        case _ if is_question:
+            question_tuple = ('I have no clue.', 'Maybe.')
+            print(random.choice(question_tuple))
+        # rule 11
+        case _ if 'because' in words:
+            print('Is that real reason?')
+        # rule 12
+        case _:
+            question_tuple = ("That's interesting.", "That's nice!",
+                              'Can you elaborate on that?')
+            print(random.choice(question_tuple))
+    return False
 
 
 def main():
@@ -140,6 +136,8 @@ def main():
     done = False
     while not done:
         done = chat_with(name)
+    print(f'Bye {name}')
+    print(f'Have a great day!')
 
 
 if __name__ == '__main__':
