@@ -29,10 +29,10 @@ import string
 
 
 # constant assignments
-# special topics
-TOPICS = {"family", "friend", "friends", "mom", "dad", "brother", "sister",
+# special topics for rule 2
+TOPICS = ("family", "friend", "friends", "mom", "dad", "brother", "sister",
           "girlfriend", "boyfriend", "children", "son", "daughter", "child",
-          "wife", "husband", "home", "dog", "cat", "pet"}
+          "wife", "husband", "home", "dog", "cat", "pet")
 # pronouns based on user's input
 PRONOUNS = {"i": "you", "am": "are", "my": "your",
             "your": "my", "me": "you", "you": "me"}
@@ -46,9 +46,10 @@ def change_person(*args):
     """
     # change the pronouns if it is in the mapping dictionary
     # otherwise, remain the word the same
-    s = [PRONOUNS[word] if word in PRONOUNS.keys() else word for word in args]
+    new_words = [PRONOUNS[word] if word in PRONOUNS else word
+                 for word in args]
 
-    return ' '.join(s)
+    return ' '.join(new_words)
 
 
 def chat_with(name):
@@ -61,80 +62,69 @@ def chat_with(name):
     :return: (Boolean) True if user inputs bye(.)
              False otherwise
     """
-    verbs = ["tell", "give", "say"]  # list of verbs
+    # list of question words for rule 3
+    rule3 = ["do", "can", "will", "would"]
+    # list of words for rule 7
+    rule7 = ["need", "think", "have", "want"]
+    # list of verbs
+    verbs = ["tell", "give", "say"]
 
     request = input("Talk to me please> ")
 
     # lower all letters from the input and
     # separate string into a list of words
-    words = request.lower().split()
+    # remove leading and trailing punctuation from each word
+    words = [word.strip(string.punctuation) for word in
+             request.lower().split()]
 
     # check if the request is a question
-    is_question = False
-    if request[-1] == '?':
-        is_question = True
-
-    # remove the leading and trailing punctuation
-    words = [word.strip(string.punctuation) for word in words]
-
-    is_too = False
-    is_verb = False
-    is_because = False
+    is_question = (request[-1] == '?')
 
     # find intersection of words and special topics
-    special_topics = set(words) & TOPICS
-
-    # check if the request end with "too"
-    if words[-1] == "too":
-        is_too = True
-    # check if the request starts from verb from the list
-    if words[0] in verbs:
-        is_verb = True
-    # check if the request contains "because"
-    if "because" in words:
-        is_because = True
+    common_topics = set(words) & set(TOPICS)
 
     match words:
         # rule 1
         case ['bye']:
             return True
         # rule 2
-        case [*rest] if len(special_topics):
-            print(f"Tell me more about your {special_topics.pop()}, {name}.")
+        case _ if common_topics:
+            print(f"Tell me more about your {common_topics.pop()}, {name}.")
         # rule 3
-        case [('do' | 'can' | 'will' | 'would') as word, 'you', *rest]:
+        case [question, 'you', *rest] if question in rule3 and is_question:
             changed_pronouns = change_person(*rest)
-            response = [f"No {name}, I {word} not {changed_pronouns}.",
-                        f"Yes I {word}."]
+            response = [f"No {name}, I {question} not {changed_pronouns}.",
+                        f"Yes I {question}."]
             print(random.choice(response))
-        # rule 4 & rule 5 & rule 6
-        case [('why' | 'how' | 'what') as question, *rest] if is_question:
-            if question == "why":
-                print("Why not?")
-            if question == "how":
-                response = [f"{name}, why do you ask?",
-                            f"{name}, how would an answer to that help you?"]
-                print(random.choice(response))
-            if question == "what":
-                response = [f"What do you think {name}?",
-                            f"Why is that important {name}?"]
-                print(random.choice(response))
+        # rule 4
+        case ['why', *rest] if is_question:
+            print("Why not?")
+        # rule 5
+        case ['how', *rest] if is_question:
+            response = [f"{name}, why do you ask?",
+                        f"{name}, how would an answer to that help you?"]
+            print(random.choice(response))
+        # rule 6
+        case ['what', *rest] if is_question:
+            response = [f"What do you think {name}?",
+                        f"Why is that important {name}?"]
+            print(random.choice(response))
         # rule 7
-        case ['i', ('need' | 'think' | 'have' | 'want') as word, *rest]:
+        case ['i', word, *rest] if word in rule7:
             changed_pronouns = change_person(*rest)  # change the pronouns
             print(f"Why do you {word} {changed_pronouns}?")
         # rule 8
-        case ['i', *rest] if not is_too:
+        case ['i', *rest] if words[-1] != "too":
             print(f"I {' '.join(rest)} too.")
         # rule 9
-        case [*rest] if is_verb:
-            print(f"You {' '.join(rest)}.")
+        case [verb, *rest] if verb in verbs:
+            print(f"You {verb} {' '.join(rest)}.")
         # rule 10
-        case [*question] if is_question:
+        case _ if is_question:
             response = ["I have no clue.", "Maybe."]
             print(random.choice(response))
         # rule 11
-        case [*pre] if is_because:
+        case _ if "because" in words:
             print("Is that the real reason?")
         # rule 12
         case _:
@@ -149,7 +139,9 @@ def main():
     # 1.Prompt the user for their name
     # 2.Call chat_with repeatedly passing the name as argument
     # 3.When chat_with returns True, print the goodbye messages.
+
     username = input("Hello. What is your name please? ")
+
     # check if user enters bye(.)
     done = False
     while not done:
