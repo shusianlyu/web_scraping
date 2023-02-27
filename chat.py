@@ -79,7 +79,7 @@ def chat_with(name):
             print(f"Tell me more about your {common_topics.pop()}, {name}.")
         # rule 3
         case [question, 'you', *rest] if question in rule3 and is_question:
-            changed_pronouns = change_person(*rest)
+            changed_pronouns = change_person(*rest)  # change the pronouns
             response = [f"No {name}, I {question} not {changed_pronouns}.",
                         f"Yes I {question}."]
             print(random.choice(response))
