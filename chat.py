@@ -4,29 +4,16 @@
 # Author(s): Jessie Lyu, An Tran
 # ----------------------------------------------------------------------
 """
-Simple implementation of a chatbot
+Implementation of a very simple chatbot
 
-The program will first prompt the user for their name.
-The program will terminate after the response to the bye input.
-The program will be case-insensitive and will generate a response
-based on the following rules in descending priority order.
-1. Bye(.)
-2. Input contains a special topic
-3. Input starts with do, can, will or would and is a question
-4. Input starts with why and is a question
-5. Input starts with how and is a question
-6. Input starts with what and is a question
-7. Input starts with i and with following word of
-need, think, have, or want
-8. Input starts with i and the last word is not "too"
-9. Input starts with verb from the list
-10. Input ends with question mark
-11. Input contains "because"
-12. Everything else
+Chatbot asks user for name and then asks user for input.
+Based off of certain rules, the chatbot will respond with certain
+messages. The chatbot can change pronouns to fit the response and
+respond with a variety of random responses from the chatbot's response
+bank.
 """
 import random
 import string
-
 
 # constant assignments
 # special topics for rule 2
@@ -66,7 +53,7 @@ def chat_with(name):
     rule3 = ["do", "can", "will", "would"]
     # list of words for rule 7
     rule7 = ["need", "think", "have", "want"]
-    # list of verbs
+    # list of verbs for rule 9
     verbs = ["tell", "give", "say"]
 
     request = input("Talk to me please> ")
