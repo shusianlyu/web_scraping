@@ -15,6 +15,7 @@ and some additional information based on each class' requirement.
 
 
 class Product:
+
     """
     Represent a product that sold by the store.
 
@@ -120,6 +121,7 @@ class Product:
 
 
 class VideoGame(Product):
+
     """
     Represent a video game product with specific category and
     independent counter for the serial number.
@@ -146,6 +148,7 @@ class VideoGame(Product):
 
 
 class Book(Product):
+
     """
     Represent a book product with specific category,
     independent counter for the serial number, author and pages.
@@ -184,6 +187,7 @@ class Book(Product):
 
 
 class Bundle(Product):
+
     """
     Represent a bundle of two or more products with specific category,
     independent counter for the serial number and discount.
@@ -201,6 +205,7 @@ class Bundle(Product):
     sales (list): bundle product's actual sale prices.
     reviews (list): bundle product's user reviews.
     """
+
     # class variables
     category = "BL"  # denotes the category
     next_serial_number = 1  # denotes the next serial number
