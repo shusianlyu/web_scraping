@@ -44,6 +44,17 @@ class Product:
         self.sales = []
         self.reviews = []
 
+    def __str__(self):
+        return (f"{self.description}\n"
+                f"Product ID: {self.id}\n"
+                f"List price: ${self.list_price:,.2f}\n"
+                f"Available in stock: {self.stock}")
+
+    def __add__(self, other):
+        # create bundle
+        new_bundle = Bundle(self, other)
+        return new_bundle
+
     def restock(self, quantity):
         """
         Restock the given quantity to the product.
@@ -86,12 +97,6 @@ class Product:
         cls.next_serial_number += 1
         return product_id
 
-    def __str__(self):
-        return (f"{self.description}\n"
-                f"Product ID: {self.id}\n"
-                f"List price: ${self.list_price:,.2f}\n"
-                f"Available in stock: {self.stock}")
-
     @property
     def lowest_price(self):
         """
@@ -113,11 +118,6 @@ class Product:
         if self.reviews:
             return sum(y for x, y in self.reviews) / len(self.reviews)
         return None
-
-    def __add__(self, other):
-        # create bundle
-        new_bundle = Bundle(self, other)
-        return new_bundle
 
 
 class VideoGame(Product):
@@ -178,9 +178,6 @@ class Book(Product):
         super().__init__(description, list_price)
         self.author = author
         self.pages = pages
-
-    def __gt__(self, other):
-        return self.pages > other.pages
 
     def __lt__(self, other):
         return self.pages < other.pages
