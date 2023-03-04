@@ -2,11 +2,15 @@
 # Name:      store
 # Purpose:   implement a fictional online store
 # Author(s): Jessie Lyu, An Tran
+# Date: 03/04/2023
 # ----------------------------------------------------------------------
 """
 Implementation of a fictional online store
 
-docstring here
+This program consists of four classes to represent and
+manipulate items sold by a fictional online store.
+The class is created by description, listing price,
+and some additional information based on each class' requirement.
 """
 
 
@@ -63,13 +67,13 @@ class Product:
         :param sale_price: (int) the actual sale price of product
         :return: None
         """
-        if self.stock:
-            if self.stock > quantity:
-                self.stock -= quantity
-                self.sales.extend([sale_price] * quantity)
-            else:
-                self.sales.extend([sale_price] * self.stock)
-                self.stock = 0
+        # check if stock is sufficient
+        if self.stock > quantity:
+            self.stock -= quantity
+            self.sales.extend([sale_price] * quantity)
+        else:
+            self.sales.extend([sale_price] * self.stock)
+            self.stock = 0
 
     @classmethod
     def generate_product_id(cls):
@@ -82,10 +86,6 @@ class Product:
         return product_id
 
     def __str__(self):
-        """
-        String representation of an object.
-        :return: (string) representation of an object
-        """
         return (f"{self.description}\n"
                 f"Product ID: {self.id}\n"
                 f"List price: ${self.list_price:,.2f}\n"
@@ -97,6 +97,7 @@ class Product:
         Find the lowest price of the product.
         :return: (int) lowest price, None otherwise
         """
+        # check if the product has been sold
         if self.sales:
             return min(self.sales)
         return None
@@ -107,16 +108,13 @@ class Product:
         Average star rating for the product.
         :return: (float) average star rating, None otherwise
         """
+        # check if the product has reviews
         if self.reviews:
             return sum(y for x, y in self.reviews) / len(self.reviews)
         return None
 
     def __add__(self, other):
-        """
-        Specify the behavior of + operator.
-        :param other: (object) product to be created as a bundle
-        :return: bundle object
-        """
+        # create bundle
         new_bundle = Bundle(self, other)
         return new_bundle
 
@@ -142,6 +140,9 @@ class VideoGame(Product):
     # class variables
     category = "VG"  # denotes the category
     next_serial_number = 1  # denotes the next serial number
+
+    def __init__(self, description, list_price):
+        super().__init__(description, list_price)
 
 
 class Book(Product):
@@ -176,19 +177,9 @@ class Book(Product):
         self.pages = pages
 
     def __gt__(self, other):
-        """
-        Specify the behavior of > operator.
-        :param other: (object) product to be compared
-        :return: (Boolean) True if greater, False otherwise
-        """
         return self.pages > other.pages
 
     def __lt__(self, other):
-        """
-        Specify the behavior of < operator.
-        :param other: (object) product to be compared
-        :return: (Boolean) True if less than, False otherwise
-        """
         return self.pages < other.pages
 
 
@@ -213,16 +204,20 @@ class Bundle(Product):
     # class variables
     category = "BL"  # denotes the category
     next_serial_number = 1  # denotes the next serial number
-    bundle_discount = 20
+    bundle_discount = 20  # denotes the discount of the bundle
 
     def __init__(self, item1, item2, *args):
         description = f"{item1.description} & {item2.description}"
-        list_price = item1.list_price + item2.list_price
+        price = item1.list_price + item2.list_price
+        # check if the items are more than two
         if args:
+            # add product descriptions to the string
             description += ' & ' + (' & '.join(arg.description
                                                for arg in args))
-            list_price += sum(arg.list_price for arg in args)
-        list_price = list_price * (100 - self.bundle_discount) / 100
+            # sum up the price of remaining items
+            price += sum(arg.list_price for arg in args)
+        # update list_price with discount
+        list_price = price * (100 - self.bundle_discount) / 100
 
         super().__init__(description, list_price)
 
