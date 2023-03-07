@@ -117,7 +117,6 @@ class Product:
         # check if the product has reviews
         if self.reviews:
             return sum(y for x, y in self.reviews) / len(self.reviews)
-        return None
 
 
 class VideoGame(Product):
