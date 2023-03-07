@@ -106,7 +106,6 @@ class Product:
         # check if the product has been sold
         if self.sales:
             return min(self.sales)
-        return None
 
     @property
     def average_rating(self):
