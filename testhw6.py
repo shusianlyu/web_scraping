@@ -28,6 +28,7 @@ class TestFinalGrade(unittest.TestCase):
         self.default_dic = {'Lisa': 85, 'Tom': 90, 'Alex': 70}
         # empty dictionary
         self.empty_dic = {}
+        # non empty dict
         self.non_empty_dict = {'Lisa': 85, 'Tom': 90, 'Alex': 70, 'Rose': 30}
 
     def test_default_argument(self):
@@ -37,12 +38,15 @@ class TestFinalGrade(unittest.TestCase):
         # expected grades dict after calling the method
         expected_grades = {'Lisa': 86, 'Tom': 91, 'Alex': 71}
         self.assertEqual(update_grades, expected_grades)
+        # test on undesired effect
+        self.assertNotEqualEqual(update_grades, self.default_dic)
 
     def test_empty_dictionary(self):
         """Test an update on empty dictionary"""
         # new updated grades dict
         update_grades = homework6.final_grade(self.empty_dic, 3)
         self.assertEqual(update_grades, {})
+        # test on undesired effect
         self.assertEqual(self.empty_dic, {})
 
     def test_non_empty_dictionary(self):
