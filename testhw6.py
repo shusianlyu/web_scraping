@@ -39,7 +39,7 @@ class TestFinalGrade(unittest.TestCase):
         expected_grades = {'Lisa': 86, 'Tom': 91, 'Alex': 71}
         self.assertEqual(update_grades, expected_grades)
         # test on undesired effect
-        self.assertNotEqualEqual(update_grades, self.default_dic)
+        self.assertNotEqual(update_grades, self.default_dic)
 
     def test_empty_dictionary(self):
         """Test an update on empty dictionary"""
