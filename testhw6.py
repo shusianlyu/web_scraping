@@ -99,6 +99,10 @@ class TestMostWords(unittest.TestCase):
         """Test on function with many arguments"""
         self.assertEqual(hw6.most_words(self.str1, self.str2,
                                         self.str3, self.str4), self.str4)
+        self.assertEqual(hw6.most_words(self.str4, self.str3,
+                                        self.str2, self.str1), self.str4)
+        self.assertEqual(hw6.most_words(self.str3, self.str1,
+                                        self.str4, self.str2), self.str4)
 
 
 if __name__ == '__main__':
