@@ -1,0 +1,138 @@
+pfam_id	count_in_one_cluster	count_over_all_clusters
+pfam01751===Toprim domain	1	40
+pfam07927===HicA toxin of bacterial toxin-antitoxin, 	1	20
+pfam13624===SurA N-terminal domain	1	1
+pfam00171===Aldehyde dehydrogenase family	1	3
+pfam00005===ABC transporter	2	8
+pfam02934===GatB/GatE catalytic domain	1	1
+pfam00179===Ubiquitin-conjugating enzyme	1	14
+pfam04397===LytTr DNA-binding domain	1	1
+pfam03259===Roadblock/LC7 domain	1	1
+pfam13426===PAS domain	2	12
+pfam09822===ABC-type uncharacterized transport system	1	1
+pfam07878===CopG-like RHH_1 or ribbon-helix-helix domain, RHH_5	1	1
+pfam08448===PAS fold	1	1
+pfam10728===Domain of unknown function (DUF2520)	1	1
+pfam13620===Carboxypeptidase regulatory-like domain	1	2
+pfam14520===Helix-hairpin-helix domain	1	2
+pfam02604===Antitoxin Phd_YefM, type II toxin-antitoxin system	1	1
+pfam13267===Protein of unknown function (DUF4058)	1	1
+pfam14833===NAD-binding of NADP-dependent 3-hydroxyisobutyrate dehydrogenase	1	1
+pfam01613===Flavin reductase like domain	1	1
+pfam13646===HEAT repeats	1	1
+pfam00990===Diguanylate cyclase, GGDEF domain	1	1
+pfam00004===ATPase family associated with various cellular activities (AAA)	1	8
+pfam12697===Alpha/beta hydrolase family	1	3
+pfam05016===ParE toxin of type II toxin-antitoxin system, parDE	1	6
+pfam13559===Domain of unknown function (DUF4129)	1	1
+pfam08502===LeuA allosteric (dimerisation) domain	1	1
+pfam02381===MraZ protein, putative antitoxin-like	1	4
+pfam01555===DNA methylase	1	1
+pfam00148===Nitrogenase component 1 type Oxidoreductase	1	1
+pfam13462===Thioredoxin	1	2
+pfam02518===Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase	1	2
+pfam01978===Sugar-specific transcriptional regulator TrmB	1	2
+pfam00682===HMGL-like	1	1
+pfam05598===Transposase domain (DUF772)	1	1
+pfam05685===Putative restriction endonuclease	1	6
+pfam00400===WD domain, G-beta repeat	1	3
+pfam13561===Enoyl-(Acyl carrier protein) reductase	1	2
+pfam09190===DALR domain	1	2
+pfam01678===Diaminopimelate epimerase	1	1
+pfam15738===Bacterial toxin of type II toxin-antitoxin system, YafQ 	1	2
+pfam02899===Phage integrase, N-terminal SAM-like domain	1	7
+pfam01850===PIN domain	1	4
+pfam03806===AbgT putative transporter family	1	1
+pfam00664===ABC transporter transmembrane region	1	1
+pfam02894===Oxidoreductase family, C-terminal alpha/beta domain	1	2
+pfam01195===Peptidyl-tRNA hydrolase	1	2
+pfam06508===Queuosine biosynthesis protein QueC	1	11
+pfam04972===BON domain	1	1
+pfam00924===Mechanosensitive ion channel	1	1
+pfam01845===CcdB protein	1	3
+pfam01522===Polysaccharide deacetylase	1	1
+pfam01541===GIY-YIG catalytic domain	1	1
+pfam08450===SMP-30/Gluconolactonase/LRE-like region	1	2
+pfam00741===Gas vesicle protein	1	1
+pfam13784===Fic/DOC family N-terminal	1	1
+pfam02452===PemK-like, MazF-like toxin of type II toxin-antitoxin system	1	4
+pfam13525===Outer membrane lipoprotein	1	1
+pfam00395===S-layer homology domain	1	2
+pfam00496===Bacterial extracellular solute-binding proteins, family 5 Middle	1	1
+pfam08532===Beta-galactosidase trimerisation domain	1	2
+pfam04014===Antidote-toxin recognition MazE, bacterial antitoxin	1	5
+pfam02811===PHP domain	1	2
+pfam00528===Binding-protein-dependent transport system inner membrane component	1	2
+pfam07661===MORN repeat variant	1	1
+pfam09285===Elongation factor P, C-terminal	1	1
+pfam03372===Endonuclease/Exonuclease/phosphatase family	1	2
+pfam10431===C-terminal, D2-small domain, of ClpB protein 	1	1
+pfam00231===ATP synthase	1	3
+pfam13545===Crp-like helix-turn-helix domain	1	1
+pfam08843===Nucleotidyl transferase AbiEii toxin, Type IV TA system	1	1
+pfam02803===Thiolase, C-terminal domain	1	1
+pfam10099===Anti-sigma-K factor rskA	1	1
+pfam01476===LysM domain	1	1
+pfam02195===ParB-like nuclease domain	1	5
+pfam12215===beta-glucosidase 2, glycosyl-hydrolase family 116 N-term	1	1
+pfam03462===PCRF domain	1	1
+pfam01261===Xylose isomerase-like TIM barrel	1	1
+pfam02686===Glu-tRNAGln amidotransferase C subunit	1	1
+pfam03147===Ferredoxin-fold anticodon binding domain	1	1
+pfam08447===PAS fold	1	4
+pfam02082===Iron-dependent Transcriptional regulator	1	1
+pfam06429===Flagellar basal body rod FlgEFG protein C-terminal	1	1
+pfam16884===N-terminal domain of oxidoreductase	1	1
+pfam16927===N-terminal 7TM region of histidine kinase	1	1
+pfam01250===Ribosomal protein S6	1	1
+pfam07662===Na+ dependent nucleoside transporter C-terminus	1	3
+pfam07963===Prokaryotic N-terminal methylation motif	1	1
+pfam01336===OB-fold nucleic acid binding domain	1	1
+pfam00892===EamA-like transporter family	1	2
+pfam00582===Universal stress protein family	1	2
+pfam10531===SLBB domain	1	1
+pfam01381===Helix-turn-helix	1	2
+pfam00270===DEAD/DEAH box helicase	1	1
+pfam02230===Phospholipase/Carboxylesterase	1	1
+pfam01297===Zinc-uptake complex component A periplasmic	1	1
+pfam13662===Toprim domain	1	1
+pfam06769===YoeB-like toxin of bacterial type II toxin-antitoxin system	1	1
+pfam07729===FCD domain	1	1
+pfam01435===Peptidase family M48	1	1
+pfam12724===Flavodoxin domain	1	1
+pfam15919===HicB_like antitoxin of bacterial toxin-antitoxin system	1	1
+pfam14492===Elongation Factor G, domain III	1	4
+pfam07194===P2 response regulator binding domain	1	1
+pfam01087===Galactose-1-phosphate uridyl transferase, N-terminal domain	1	1
+pfam00155===Aminotransferase class I and II	1	1
+pfam02881===SRP54-type protein, helical bundle domain	1	1
+pfam14907===Uncharacterised nucleotidyltransferase	1	1
+pfam02515===CoA-transferase family III	1	1
+pfam05762===VWA domain containing CoxE-like protein	1	1
+pfam12729===Four helix bundle sensory module for signal transduction	1	1
+pfam01402===Ribbon-helix-helix protein, copG family	1	2
+pfam01145===SPFH domain / Band 7 family	1	1
+pfam02771===Acyl-CoA dehydrogenase, N-terminal domain	1	1
+pfam02092===Glycyl-tRNA synthetase beta subunit	1	1
+pfam07517===SecA DEAD-like domain	1	1
+pfam00209===Sodium:neurotransmitter symporter family	1	1
+pfam03885===Protein of unknown function (DUF327)	1	1
+pfam01022===Bacterial regulatory protein, arsR family	1	2
+pfam13437===HlyD family secretion protein	1	1
+pfam13638===PIN domain	1	1
+pfam13020===Domain of unknown function (DUF3883)	1	1
+pfam13185===GAF domain	1	1
+pfam02661===Fic/DOC family	1	1
+pfam15937===prlF antitoxin for toxin YhaV_toxin	1	1
+pfam13379===NMT1-like family	1	1
+pfam02954===Bacterial regulatory protein, Fis family	1	1
+pfam04359===Protein of unknown function (DUF493)	1	1
+pfam05198===Translation initiation factor IF-3, N-terminal domain	1	1
+pfam02308===MgtC family	1	1
+pfam08241===Methyltransferase domain	1	1
+pfam07973===Threonyl and Alanyl tRNA synthetase second additional domain	1	2
+pfam13280===WYL domain	1	1
+pfam13489===Methyltransferase domain	1	1
+pfam01156===Inosine-uridine preferring nucleoside hydrolase	1	1
+pfam08646===Replication factor-A C terminal domain	1	1
+pfam06013===Proteins of 100 residues with WXG	1	1

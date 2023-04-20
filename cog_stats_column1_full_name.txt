@@ -1,0 +1,130 @@
+cog_id	count_in_one_cluster	count_over_all_clusters
+COG1475===Chromosome segregation protein Spo0J, contains ParB-like nuclease domain	2	6
+COG3550===Serine/threonine protein kinase HipA, toxin component of the HipAB toxin-antitoxin module	1	2
+COG4972===Tfp pilus assembly protein, ATPase PilM	1	1
+COG2308===Uncharacterized conserved protein, circularly permuted ATPgrasp superfamily	1	1
+COG2255===Holliday junction resolvasome RuvABC, ATP-dependent DNA helicase subunit	1	1
+COG0379===Quinolinate synthase	1	1
+COG2944===DNA-binding transcriptional regulator YiaG, XRE-type HTH domain	1	1
+COG3549===Plasmid maintenance system killer protein	2	2
+COG0789===DNA-binding transcriptional regulator, MerR family	1	1
+COG2885===Outer membrane protein OmpA and related peptidoglycan-associated (lipo)proteins	1	1
+COG0704===Phosphate uptake regulator	1	1
+COG1387===Histidinol phosphatase or related hydrolase of the PHP family	1	1
+COG0726===Peptidoglycan/xylan/chitin deacetylase, PgdA/CDA1 family	1	1
+COG3668===Plasmid stabilization system protein ParE	2	3
+COG1569===Predicted nucleic acid-binding protein, contains PIN domain	1	1
+COG3041===mRNA-degrading endonuclease (mRNA interferase) YafQ, toxin component of the YafQ-DinJ toxin-antitoxin module	1	3
+COG0721===Asp-tRNAAsn/Glu-tRNAGln amidotransferase C subunit	1	1
+COG0360===Ribosomal protein S6	1	1
+COG2172===Anti-sigma regulatory factor (Ser/Thr protein kinase)	1	1
+COG4227===Antirestriction protein ArdC	1	1
+COG1261===Flagella basal body P-ring formation protein FlgA	1	1
+COG3093===Plasmid maintenance system antidote protein VapI, contains XRE-type HTH domain	1	1
+COG0751===Glycyl-tRNA synthetase, beta subunit	1	1
+COG1875===Predicted ribonuclease YlaK, contains NYN-type RNase and PhoH-family ATPase domains	1	1
+COG0673===Predicted dehydrogenase	1	1
+COG3654===Prophage maintenance system killer protein	1	2
+COG1692===Calcineurin-like phosphoesterase	1	1
+COG0573===ABC-type phosphate transport system, permease component	1	1
+COG1596===Periplasmic protein involved in polysaccharide export, contains SLBB domain of the beta-grasp fold	1	1
+COG4869===Propanediol utilization protein	1	1
+COG2812===DNA polymerase III, gamma/tau subunits	1	1
+COG2253===Predicted nucleotidyltransferase component of viral defense system	1	2
+COG2165===Type II secretory pathway, pseudopilin PulG	1	1
+COG1887===CDP-glycerol glycerophosphotransferase, TagB/SpsB family	1	1
+COG3744===PIN domain nuclease, a component of toxin-antitoxin system (PIN domain)	1	2
+COG2872===Ser-tRNA(Ala) deacylase AlaX (editing enzyme)	1	1
+COG2319===WD40 repeat	1	1
+COG2227===2-polyprenyl-3-methyl-5-hydroxy-6-metoxy-1,4-benzoquinol methylase	1	1
+COG4456===Virulence-associated protein VagC (function unknown)	1	1
+COG2002===Bifunctional DNA-binding transcriptional regulator of stationary/sporulation/toxin gene expression and antitoxin component of the YhaV-PrlF toxin-antitoxin module	1	3
+COG1360===Flagellar motor protein MotB	1	1
+COG3077===Antitoxin component of the RelBE or YafQ-DinJ toxin-antitoxin module	1	1
+COG2202===PAS domain	1	1
+COG3666===Transposase	1	1
+COG0760===Parvulin-like peptidyl-prolyl isomerase	1	3
+COG4099===Predicted peptidase	1	1
+COG1724===Predicted RNA binding protein YcfA, dsRBD-like fold, HicA-like mRNA interferase family	1	1
+COG0110===Acetyltransferase (isoleucine patch superfamily)	1	1
+COG0438===Glycosyltransferase involved in cell wall bisynthesis	1	1
+COG1848===Predicted nucleic acid-binding protein, contains PIN domain	1	2
+COG0097===Ribosomal protein L6P/L9E	1	1
+COG3899===Predicted ATPase	1	1
+COG1473===Metal-dependent amidase/aminoacylase/carboxypeptidase	1	1
+COG1220===ATP-dependent protease HslVU (ClpYQ), ATPase subunit	1	1
+COG1598===Predicted nuclease of the RNAse H fold, HicB family	1	2
+COG1256===Flagellar hook-associated protein FlgK	1	1
+COG0072===Phenylalanyl-tRNA synthetase beta subunit	1	1
+COG5340===Transcriptional regulator, predicted component of viral defense system	1	1
+COG0119===Isopropylmalate/homocitrate/citramalate synthases	1	2
+COG4783===Putative Zn-dependent protease, contains TPR repeats	1	1
+COG2987===Urocanate hydratase	1	1
+COG1082===Sugar phosphate isomerase/epimerase	1	1
+COG0820===Adenine C2-methylase RlmN of 23S rRNA A2503 and tRNA A37	1	1
+COG1802===DNA-binding transcriptional regulator, GntR family	1	1
+COG2521===Predicted archaeal methyltransferase	1	1
+COG2206===HD-GYP domain, c-di-GMP phosphodiesterase class II (or its inactivated variant)	1	1
+COG3944===Capsular polysaccharide biosynthesis protein	1	1
+COG5078===Ubiquitin-protein ligase	1	1
+COG1807===4-amino-4-deoxy-L-arabinose transferase or related glycosyltransferase of PMT family	1	1
+COG5305===Uncharacterized membrane protein	1	1
+COG0175===3'-phosphoadenosine 5'-phosphosulfate sulfotransferase (PAPS reductase)/FAD synthetase or related enzyme	1	1
+COG3514===Uncharacterized conserved protein, DUF4415 family	1	1
+COG2084===3-hydroxyisobutyrate dehydrogenase or related beta-hydroxyacid dehydrogenase	1	1
+COG1173===ABC-type dipeptide/oligopeptide/nickel transport system, permease component	1	1
+COG1175===ABC-type sugar transport system, permease component	1	1
+COG0472===UDP-N-acetylmuramyl pentapeptide phosphotransferase/UDP-N-acetylglucosamine-1-phosphate transferase	1	1
+COG4842===Uncharacterized conserved protein YukE	1	1
+COG0205===6-phosphofructokinase	1	1
+COG2161===Antitoxin component YafN of the YafNO toxin-antitoxin module, PHD/YefM family	1	1
+COG0442===Prolyl-tRNA synthetase	1	1
+COG1349===DNA-binding transcriptional regulator of sugar metabolism, DeoR/GlpR family	1	1
+COG3177===Fic family protein	1	1
+COG2717===Periplasmic DMSO/TMAO reductase YedYZ, heme-binding membrane subunit	1	1
+COG1032===Radical SAM superfamily enzyme YgiQ, UPF0313 family	1	1
+COG4115===Toxin component of the Txe-Axe toxin-antitoxin module, Txe/YoeB family	1	1
+COG0708===Exonuclease III	1	1
+COG3742===Uncharacterized protein, contains PIN domain	1	1
+COG4636===Endonuclease, Uma2 family (restriction endonuclease fold)	1	1
+COG1968===Undecaprenyl pyrophosphate phosphatase UppP	1	1
+COG4587===ABC-type uncharacterized transport system, permease component	1	1
+COG4877===Uncharacterized protein	1	1
+COG0477===MFS family permease	1	1
+COG0733===Na+-dependent transporter, SNF family	1	1
+COG2849===Antitoxin component YwqK of the YwqJK toxin-antitoxin module	1	1
+COG3386===Sugar lactone lactonase YvrE	1	1
+COG1972===Nucleoside permease NupC	1	1
+COG0596===Pimeloyl-ACP methyl ester carboxylesterase	1	1
+COG2929===Uncharacterized conserved protein, DUF497 family	1	1
+COG0525===Valyl-tRNA synthetase	1	1
+COG1085===Galactose-1-phosphate uridylyltransferase	1	1
+COG3905===Predicted transcriptional regulator	1	1
+COG4198===Uncharacterized conserved protein, DUF1015 family	1	1
+COG0451===Nucleoside-diphosphate-sugar epimerase	1	1
+COG1186===Protein chain release factor B	1	1
+COG1651===Protein-disulfide isomerase	1	1
+COG2706===6-phosphogluconolactonase, cycloisomerase 2 family	1	1
+COG3225===ABC-type uncharacterized transport system involved in gliding motility, auxiliary component	1	1
+COG0181===Porphobilinogen deaminase	1	1
+COG1191===DNA-directed RNA polymerase specialized sigma subunit	1	1
+COG0635===Coproporphyrinogen III oxidase or related Fe-S oxidoreductase	1	1
+COG4354===Uncharacterized protein, contains GBA2_N and DUF608 domains	1	1
+COG3046===Uncharacterized protein related to deoxyribodipyrimidine photolyase	1	1
+COG5495===Predicted oxidoreductase, contains short-chain dehydrogenase (SDR) and DUF2520 domains	1	1
+COG1957===Inosine-uridine nucleoside N-ribohydrolase	1	1
+COG0681===Signal peptidase I	1	1
+COG1388===LysM repeat	1	1
+COG1285===Uncharacterized membrane protein YhiD, involved in acid resistance	1	1
+COG0156===7-keto-8-aminopelargonate synthetase or related enzyme	1	1
+COG1728===Uncharacterized protein YaaR, TM1646/DUF327 family	1	1
+COG0603===7-cyano-7-deazaguanine synthase (queuosine biosynthesis)	1	1
+COG4635===Protoporphyrinogen IX oxidase, menaquinone-dependent (flavodoxin domain)	1	1
+COG0747===ABC-type transport system, periplasmic component	1	1
+COG2404===Oligoribonuclease NrnB or cAMP/cGMP phosphodiesterase, DHH superfamily	1	1
+COG0226===ABC-type phosphate transport system, periplasmic component	1	1
+COG5119===Uncharacterized protein, contains ParB-like nuclease domain	1	1
+COG0024===Methionine aminopeptidase	1	1
+COG2365===Protein tyrosine/serine phosphatase	1	1
+COG1734===RNA polymerase-binding transcription factor DksA	1	1
+COG0406===Broad specificity phosphatase PhoE	1	1
