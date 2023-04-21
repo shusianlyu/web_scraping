@@ -2,7 +2,7 @@
 # Name:        scrape.py
 # Purpose:     Homework 8 - practice web scraping
 #
-# Author(s):
+# Author(s): Jessie Lyu, An Tran
 # ----------------------------------------------------------------------
 """
 Extract name, phone number, email, and education from webpages
