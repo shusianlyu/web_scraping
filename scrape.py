@@ -75,9 +75,9 @@ def extract_name(soup):
             return full_name.split(', ')[1].strip(), full_name.split(', ')[
                 0].strip()
         else:
-            if len(full_name.split()) == 3:
+            if len(full_name.split()) > 2:
                 return full_name.split()[0].strip(), full_name.split()[
-                    2].strip()
+                    -1].strip()
             if len(full_name.split()) == 2:
                 return full_name.split()[0].strip(), full_name.split()[
                     1].strip()
@@ -108,12 +108,13 @@ def extract_phone(soup):
     """
     # first find the element of Telephone
     result = soup('h3')
-    pattern = r'([\(]?[0-9]{3}[\)]?[-./]?[\s]?[0-9]{3}[\s.-]*[0-9]{4})'
+    pattern = r'([+]?1?[\s]?[\(]?[0-9]{3}[\)]?[-./]?[\s]?[0-9]{3}[\s.-]*[' \
+              r'0-9]{4})'
     for each in result:
         if each.get_text() == "Telephone":
             # only return the telephone number
             phone = each.find_next().get_text().split(":")
-            if len(phone) > 1:
+            if len(phone):
                 if re.match(pattern, phone[-1].strip()):
                     return re.match(pattern, phone[-1].strip()).group()
 
