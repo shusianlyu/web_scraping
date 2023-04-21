@@ -246,9 +246,6 @@ def harvest(url, filename):
     with open(filename, 'w', encoding='UTF-8') as output_file:
         output_file.write('Last Name,First Name,Email,Phone Number,'
                           'Education\n')
-        # people_info = get_info('https://sjsu.edu/people/lisa.rauch/index.html')
-        # if not people_info.startswith("None,None"):
-        #     output_file.write(people_info)
         for link in people_links:
             people_info = get_info(link)
             # for some reason link has info but no name, so it's discarded
