@@ -108,7 +108,7 @@ def extract_phone(soup):
     regex = re.compile(r'Telephone', re.IGNORECASE)
     phone_text = soup.find_all(string=regex)
     # pattern for phone numbers
-    pattern = r'([+]?1?[\s]?[\(]?[0-9]{3}[\)]?[-./]?[\s]?[0-9]{3}[\s.-]*[' \
+    pattern = r'([\(]?[0-9]{3}[\)]?[-./]?[\s]?[0-9]{3}[\s.-]*[' \
               r'0-9]{4})'
 
     if phone_text:
