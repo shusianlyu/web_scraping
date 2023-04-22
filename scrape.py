@@ -15,7 +15,6 @@ each faculty or staff and save the information in the csv file specified.
 
 import urllib.request
 import urllib.error
-import urllib.parse
 import bs4
 import re
 import sys
@@ -71,7 +70,7 @@ def extract_name(soup):
     if h1:
         full_name = h1[0].get_text()
         # deal with the different formats of full name
-        if full_name.find(',') != -1:
+        if ',' in full_name:
             return full_name.split(', ')[1].strip(), full_name.split(', ')[
                 0].strip()
         else:
@@ -90,13 +89,12 @@ def extract_email(soup):
                 web page
     :return: a string that representing the email
     """
-
-    words = soup.get_text().split()
-    # pattern for emails
-    pattern = r'\S+@\S+\.\S+'
-    for each in words:
-        if re.match(pattern, each):
-            return each.strip('.')
+    # compile regex for emails
+    regex = re.compile(r'@\S+(.edu|.com|.org)', re.IGNORECASE)
+    all_emails = soup.find_all(string=regex)
+    # check if email is found in the page
+    if all_emails:
+        return all_emails[0].strip()
 
 
 def extract_phone(soup):
@@ -107,16 +105,17 @@ def extract_phone(soup):
     :return: a string that representing the phone number
     """
     # first find the element of Telephone
-    result = soup('h3')
+    regex = re.compile(r'Telephone', re.IGNORECASE)
+    phone_text = soup.find_all(string=regex)
+    # pattern for phone numbers
     pattern = r'([+]?1?[\s]?[\(]?[0-9]{3}[\)]?[-./]?[\s]?[0-9]{3}[\s.-]*[' \
               r'0-9]{4})'
-    for each in result:
-        if each.get_text() == "Telephone":
-            # only return the telephone number
-            phone = each.find_next().get_text().split(":")
-            if len(phone):
-                if re.match(pattern, phone[-1].strip()):
-                    return re.match(pattern, phone[-1].strip()).group()
+
+    if phone_text:
+        phone = phone_text[0].find_next().get_text().split(":")
+        if phone:
+            if re.match(pattern, phone[-1].strip()):
+                return re.match(pattern, phone[-1].strip()).group()
 
 
 def extract_education(soup):
@@ -130,8 +129,15 @@ def extract_education(soup):
     result = soup('h2')
     for each in result:
         if each.get_text() == "Education":
-            return each.find_next().get_text().strip().split("\n")[
-                      0].replace(",", "-")
+            next_element = each.find_next()
+            if next_element.get_text().strip() == '':
+                next_element = next_element.find_next()
+            if next_element.name == 'ul':
+                return next_element.find_next().get_text().\
+                    replace(",", "-").replace("\n", " ").strip()
+            else:
+                return next_element.get_text().replace(',', '-').\
+                    replace("\n", " ").strip()
 
 
 def get_info(url):
@@ -173,12 +179,11 @@ def harvest(url, filename):
     # Call get_people_links to get the relevant links from the url
     people_links = get_people_links(url)
     # Open the file with a context manager and write the headers of the file
-    with open(filename, "w") as output_file:
+    with open(filename, "w", encoding='UTF-8') as output_file:
         output_file.write(f"Last Name,First Name,Email,Phone Number,"
                           f"Education\n")
-    # Iterate over the links and call get_info on each one
-    for link in people_links:
-        with open(filename, "a") as output_file:
+        # Iterate over the links and call get_info on each one
+        for link in people_links:
             # check if the info is return successfully
             if get_info(link):
                 # Write that information in the file
