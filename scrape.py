@@ -112,10 +112,16 @@ def extract_phone(soup):
               r'0-9]{4})'
 
     if phone_text:
-        phone = phone_text[0].find_next().get_text().split(":")
-        if phone:
-            if re.match(pattern, phone[-1].strip()):
-                return re.match(pattern, phone[-1].strip()).group()
+        phone_match = re.search(pattern, phone_text[0].get_text())
+        if phone_match:
+            return phone_text[0].get_text()[phone_match.start():
+                                            phone_match.end()].strip()
+        else:
+            phone_number = phone_text[0].find_next()
+            phone_match = re.search(pattern, phone_number.get_text())
+            if phone_match:
+                return phone_number.get_text()[phone_match.start():
+                                               phone_match.end()].strip()
 
 
 def extract_education(soup):
